@@ -13,6 +13,13 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter {
     private Activity context;
     private int layoutId;
     private ArrayList<Person> persons;
+
+    public RecyclerViewAdapter(Activity context, int layoutId, ArrayList<Person> persons) {
+        this.context = context;
+        this.layoutId = layoutId;
+        this.persons = persons;
+    }
+
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
