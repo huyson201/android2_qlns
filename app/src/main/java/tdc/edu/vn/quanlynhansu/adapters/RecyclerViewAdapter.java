@@ -3,13 +3,14 @@ package tdc.edu.vn.quanlynhansu.adapters;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
 import tdc.edu.vn.quanlynhansu.data_models.Person;
 
-public class RecyclerViewAdapter extends  RecyclerView.Adapter {
+public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     private Activity context;
     private int layoutId;
     private ArrayList<Person> persons;
@@ -22,17 +23,23 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter {
 
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int i) {
 
     }
 
     @Override
     public int getItemCount() {
         return persons.size();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
+        public MyViewHolder(@NonNull View itemView) {
+            super(itemView);
+        }
     }
 }
