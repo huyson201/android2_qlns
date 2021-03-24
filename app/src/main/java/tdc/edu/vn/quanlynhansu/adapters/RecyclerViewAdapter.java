@@ -5,9 +5,13 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import tdc.edu.vn.quanlynhansu.R;
 import tdc.edu.vn.quanlynhansu.data_models.Person;
 
 public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
@@ -38,8 +42,18 @@ public class RecyclerViewAdapter extends  RecyclerView.Adapter<RecyclerViewAdapt
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
+        private ImageView imageView;
+        private TextView lblName;
+        private TextView lblHobbies;
+        private CheckBox select;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            imageView = itemView.findViewById(R.id.degreeImage);
+            lblName = itemView.findViewById(R.id.lblName);
+            lblHobbies = itemView.findViewById(R.id.lblHoppies);
+            select = itemView.findViewById(R.id.chkChosen);
+
         }
     }
 }
